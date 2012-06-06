@@ -1,0 +1,22 @@
+%h1
+  Sign in
+
+= form_for(:session, url: sessions_path) do |f|
+
+  = f.label :email
+  %br
+  = f.text_field :email
+
+  %br
+
+  = f.label :password
+  %br
+  = f.password_field :password
+
+  %br
+  %br
+  = f.submit "Sign in", disable_with: "processing..."
+
+%p
+  New User?
+  = link_to "Sign up now!", signup_path

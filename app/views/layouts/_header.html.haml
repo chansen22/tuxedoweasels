@@ -1,0 +1,11 @@
+%header
+  #nav
+    %ul
+      %li
+        - if not signed_in?
+          = link_to "Sign in", signin_path
+        - else
+          = link_to "Sign out", signout_path, method: "delete"
+      <!-- If signed in -->
+      <!-- Edit settings -->
+      <!-- IF ADMIN SHOW ADMIN -->
