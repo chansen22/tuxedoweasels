@@ -1,0 +1,16 @@
+<h1>Listing comic_posts</h1>
+
+<table>
+  <tr>
+    <th>Comic</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @comic_posts.each do |comic_post| %>
+  <tr>
+    <td><%= image_tag comic_post.comic %></td>
+  </tr>
+<% end %>
+</table>

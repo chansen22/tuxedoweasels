@@ -1,0 +1,22 @@
+%h1
+  Listing comic_posts
+
+%table
+  %tr
+    %th
+      Comic
+    %th
+    %th
+    %th
+
+  - @comic_posts.each do |comic_post|
+    %tr
+      %td= comic_post.comic
+      %td= link_to 'Show', comic_post
+      %td= link_to 'Edit', edit_admin_comic_post_path(comic_post)
+      %td= link_to 'Destroy', comic_post, confirm: 'Are you sure?', method: :delete
+
+%br
+%br
+
+= link_to 'New Comic post', new_admin_comic_post_path

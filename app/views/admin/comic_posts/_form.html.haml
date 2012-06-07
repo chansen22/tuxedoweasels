@@ -1,0 +1,7 @@
+= form_for([:admin, @comic_post]) do |f|
+  .field
+    = f.label :comic
+    %br
+    = f.file_field :comic
+  .actions
+    = f.submit

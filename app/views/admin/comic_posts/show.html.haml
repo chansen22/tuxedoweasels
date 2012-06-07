@@ -1,0 +1,11 @@
+%p
+  #notice
+    = notice
+
+%p
+  %bComic:
+  = image_tag @comic_post.comic
+
+= link_to 'Edit', edit_admin_comic_post_path(@comic_post)
+%br
+= link_to 'Back', admin_path

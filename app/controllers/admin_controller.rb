@@ -1,4 +1,6 @@
 class AdminController < ApplicationController
+  before_filter :authenticate
+  before_filter :admin_user
 
   def index
     @title = "Admin Portal Index"
