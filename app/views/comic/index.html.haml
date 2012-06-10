@@ -10,7 +10,10 @@
       %li
         = ">>"
   #comic-content
-    = image_tag ComicPost.last.comic
+    - if not ComicPost.last.nil?
+      = image_tag ComicPost.last.comic
+    - else
+      = image_tag "stockcars.jpg"
 
 %br
 = link_to 'Sign up', signup_path
